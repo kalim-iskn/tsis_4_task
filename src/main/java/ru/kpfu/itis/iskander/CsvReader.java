@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class CsvReader {
 
     public List<Timestamp> read() {
-        try (CSVReader reader = new CSVReader(new FileReader("/home/iskander/Desktop/ТСИС/sys_analyze/tsis_4_task/src/main/resources/ddd.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\Гулия\\IdeaProjects\\tsis_4_task\\src\\main\\resources\\ddd.csv"))) {
             return reader.readAll().stream()
                     .map(arr -> Timestamp.valueOf(Arrays.stream(arr).reduce(String::concat).get()))
                     .collect(Collectors.toList());
